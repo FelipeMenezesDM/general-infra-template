@@ -1,0 +1,11 @@
+name: Deploy to GCP - PROD
+on:
+  push:
+    branches: main
+jobs:
+  ci-cd:
+    name: CI/CD
+    uses: felipemenezesdm/general-deploy-actions/.github/workflows/gcp-infra-prod.yml@v1
+    secrets: inherit
+    with:
+      service: ${{ github.event.repository.name }}

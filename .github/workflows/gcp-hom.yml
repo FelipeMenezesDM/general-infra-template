@@ -1,0 +1,11 @@
+name: Deploy to GCP - HOM
+on:
+  push:
+    branches: homolog
+jobs:
+  ci-cd:
+    name: CI/CD
+    uses: felipemenezesdm/general-deploy-actions/.github/workflows/gcp-infra-hom.yml@v1
+    secrets: inherit
+    with:
+      service: ${{ github.event.repository.name }}

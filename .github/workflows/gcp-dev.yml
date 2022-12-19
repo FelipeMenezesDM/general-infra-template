@@ -5,5 +5,7 @@ on:
 jobs:
   ci-cd:
     name: CI/CD
-    uses: felipemenezesdm/laravel-deploy-actions/.github/workflows/gcp-infra-dev.yml@v1
+    uses: felipemenezesdm/general-deploy-actions/.github/workflows/gcp-infra-dev.yml@v1
     secrets: inherit
+    with:
+      service: ${{ github.event.repository.name }}
