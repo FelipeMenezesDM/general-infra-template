@@ -11,6 +11,7 @@ Criação de infraestrutura para as contas do Google Cloud Platform, com o GitHu
 │   │   └── terraform.tfvars
 │   └── prod/
 │       └── terraform.tfvars
+├── destroy.yml
 ├── main.tf
 └── variables.tf
 ```
